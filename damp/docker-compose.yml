@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: $APP_DAMP_IP
+      APP_PORT: $APP_DAMP_PORT
+  
+  web:
+    image: getumbrel/damp:v1.1.0
+    restart: on-failure
+    stop_grace_period: 1m
+    ports:
+      - 3002:3002
+    volumes:
+      - ${APP_DATA_DIR}/files:/files
+      - ${APP_DATA_DIR}/data:/instance
+    environment:
+      APP_PASSWORD: "$APP_PASSWORD"
+      DEVICE_HOSTNAME: "$DEVICE_HOSTNAME"
+      DEVICE_DOMAIN_NAME: "$DEVICE_DOMAIN_NAME"     
+
+      TOR_PROXY_IP: $TOR_PROXY_IP
+      TOR_PROXY_PORT: $TOR_PROXY_PORT
+      
+      APP_HIDDEN_SERVICE: $APP_HIDDEN_SERVICE
+      APP_PASSWORD: $APP_PASSWORD
+      APP_SEED: $APP_SEED

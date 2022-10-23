@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: damp
+category: Networking
+name: DAMP
+version: "1.1.0"
+tagline: Simple, distributed, api management platform
+description: >-
+  DAMP is a node-based distributed api management platform. It's a decentralized app for quickly
+  spinning up and hosting application programming interfaces (APIs), that you and others can connect
+  to from anywhere in the world.
+releaseNotes: >-
+  This is the first version of DAMP. It contains a simple way to create API's from the UI, or by making HTTP
+  requests. Data can be made public via the created endpoint, or can be for private use only. There's also
+  the possibility to create client tokens so others can access private data.
+
+developer: Jurjen van Genugten
+repo: https://github.com/bureaugewas/DAMP
+support: https://github.com/bureaugewas/DAMP/discussions
+port: 3002
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""

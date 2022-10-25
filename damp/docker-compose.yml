@@ -7,7 +7,7 @@ services:
       APP_PORT: $APP_DAMP_PORT
   
   web:
-    image: bureaugewas/DAMP:1.1
+    image: bureaugewas/damp
     restart: on-failure
     stop_grace_period: 1m
     ports:

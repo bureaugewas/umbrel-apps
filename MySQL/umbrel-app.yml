@@ -15,7 +15,7 @@ website: https://www.mysql.com/
 dependencies:
 repo: https://github.com/bureaugewas/umbrel-apps
 support:
-port: 8080
+port: 2332
 gallery:
   - 1.jpg
   - 2.jpg

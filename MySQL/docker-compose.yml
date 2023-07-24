@@ -12,7 +12,7 @@ services:
   web:
     image: phpmyadmin:latest
     build:
-      context: ./phpmyadmin  # Replace with the actual path to your phpMyAdmin Dockerfile directory
+      context: .
     restart: on-failure
     stop_grace_period: 1m
     ports:

@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      # <app-id>_<web-container-name>_1
+      # e.g. 'btc-rpc-explorer_web_1'
+      # Note that the '_1' at the end is needed
+      APP_HOST: mysql_server_web_1
+      APP_PORT: 8080
+
+  web:
+    image: phpmyadmin:latest
+    build:
+      context: ./phpmyadmin  # Replace with the actual path to your phpMyAdmin Dockerfile directory
+    restart: on-failure
+    stop_grace_period: 1m
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY= 1
+    depends_on:
+      - db
+  db:
+    image: mariadb:10.11
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: notSecureChangeMe

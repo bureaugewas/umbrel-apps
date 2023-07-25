@@ -3,7 +3,7 @@ version: "3.7"
 services:
   mysql_server:
     image: bureaugewas/mysql_server
-    platform: linux/amd64
+    platform: linux/amr64
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: root_password
@@ -19,7 +19,7 @@ services:
 
   phpmyadmin:
     image: bureaugewas/phpmyadmin
-    platform: linux/amd64
+    platform: linux/amr64
     restart: unless-stopped
     environment:
       PMA_HOST: mysql_server

@@ -3,7 +3,6 @@ version: "3.7"
 services:
   mysql_server:
     image: bureaugewas/mysql_server
-    platform: linux/amr64
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: root_password
@@ -19,14 +18,13 @@ services:
 
   phpmyadmin:
     image: bureaugewas/phpmyadmin
-    platform: linux/amr64
     restart: unless-stopped
     environment:
       PMA_HOST: mysql_server
       PMA_PORT: 3306
       MYSQL_ROOT_PASSWORD: root_password
     ports:
-      - "4554:80"
+      - "80:80"
     networks:
       - app_network
 

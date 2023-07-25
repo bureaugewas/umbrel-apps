@@ -10,9 +10,9 @@ releaseNotes: Initial release
 developer: Bureaugewas
 website: https://your-website.com
 dependencies: []
-repo: https://github.com/bureaugewas/umbrel-apps/tree/main/mysql_phpmyadmin
-support: https://github.com/bureaugewas/umbrel-apps/issues
-port: 4554
+repo: https://github.com/your_username/umbrel-apps/tree/main/mysql_phpmyadmin
+support: https://github.com/your_username/umbrel-apps/issues
+port: 80
 gallery: []
 path: ""
 defaultUsername: ""

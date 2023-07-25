@@ -12,7 +12,7 @@ website: https://your-website.com
 dependencies: []
 repo: https://github.com/your_username/umbrel-apps/tree/main/mysql_phpmyadmin
 support: https://github.com/your_username/umbrel-apps/issues
-port: 80
+port: 8080
 gallery: []
 path: ""
 defaultUsername: ""

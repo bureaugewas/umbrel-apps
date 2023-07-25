@@ -14,10 +14,10 @@ services:
       MYSQL_DATABASE: mydb
       MYSQL_USER: myuser
       MYSQL_PASSWORD: mypassword
+
     volumes:
       - ./mysql_data:/var/lib/mysql
-    ports:
-      - "3306:3306"
+    PORT: 3306:3306
     networks:
       - app_network
 
@@ -27,9 +27,8 @@ services:
     environment:
       PMA_HOST: mysql_server
       PMA_PORT: 3306
-      MYSQL_ROOT_PASSWORD: root_password
-    ports:
-      - "8080"
+      PMA_ARBITRARY: 1
+    PORT: 8080
     networks:
       - app_network
 

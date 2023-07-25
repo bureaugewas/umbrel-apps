@@ -8,8 +8,6 @@ services:
 
   web:
     image: phpmyadmin:latest
-    #build:
-    #  context: .
     restart: unless-stopped
     stop_grace_period: 1m
     ports:
@@ -20,7 +18,7 @@ services:
       - db
   db:
     image: mariadb:latest
-    restart: unless-stopped
+    restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=notSecureChangeMe
 

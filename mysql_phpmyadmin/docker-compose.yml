@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: mysql_phpmyadmin_web_1
-      APP_PORT: 8080
+      APP_PORT: 2442:8080
 
   mysql_server:
     image: bureaugewas/mysql_server
@@ -29,7 +29,7 @@ services:
       PMA_PORT: 3306
       MYSQL_ROOT_PASSWORD: root_password
     ports:
-      - "1111:80"
+      - "8080:80"
     networks:
       - app_network
 

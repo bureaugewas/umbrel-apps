@@ -17,7 +17,8 @@ services:
 
     volumes:
       - ./mysql_data:/var/lib/mysql
-    PORT: 3306:3306
+    ports:
+      - 3306:3306
     networks:
       - app_network
 
@@ -28,7 +29,8 @@ services:
       PMA_HOST: mysql_server
       PMA_PORT: 3306
       PMA_ARBITRARY: 1
-    PORT: 8080
+    ports:
+      - 8080
     networks:
       - app_network
 

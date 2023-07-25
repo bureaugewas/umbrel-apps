@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+  mysql_server:
+    image: your_username/mysql_server
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - app_network
+
+  phpmyadmin:
+    image: your_username/phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mysql_server
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "4554:80"
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge

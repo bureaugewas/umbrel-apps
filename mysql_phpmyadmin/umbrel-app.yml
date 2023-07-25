@@ -1,0 +1,19 @@
+manifestVersion: 1
+id: mysql-phpmyadmin
+category: database
+name: MySQL & PHPMyAdmin
+version: "1.0.0"
+tagline: MySQL server and PHPMyAdmin web interface
+description: >-
+  This app includes a MySQL server and a PHPMyAdmin web interface to manage the MySQL databases.
+releaseNotes: Initial release
+developer: Bureaugewas
+website: https://your-website.com
+dependencies: []
+repo: https://github.com/bureaugewas/umbrel-apps/tree/main/mysql_phpmyadmin
+support: https://github.com/bureaugewas/umbrel-apps/issues
+port: 4554
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
